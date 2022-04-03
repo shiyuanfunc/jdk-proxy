@@ -8,6 +8,7 @@ package com.shiyuan.proxy;
  */
 public class Test {
     public static void main(String[] args) {
+        System.setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         JdkProxyInterface jdkProxyInterface = MapperProxyFactory.newInstance(JdkProxyInterface.class);
         String song = jdkProxyInterface.sayHello("song");
         System.out.println(song);

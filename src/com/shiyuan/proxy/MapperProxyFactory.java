@@ -18,6 +18,7 @@ public class MapperProxyFactory {
         return newInstance(mapperProxy);
     }
 
+    @SuppressWarnings("unchecked")
     protected static <T> T newInstance(MapperProxy<T> mapperProxy) {
         return (T) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(), new Class[] { targetClz }, mapperProxy);
     }
